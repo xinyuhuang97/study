@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carnet>
+  <ami>
+    <prenom genre='Mme'> Alexandra </prenom>
+    <nom>Phone</nom>
+    <adress>
+      <rue>6, chausee de la muette</rue>
+      <ville codepostal=75016>PARIS</ville>
+    </adress>
+  </ami>
+</carnet>
+
+<carnet>
+  <ami>
+    <prenom genre='M'>Al</prenom>
+    <nom>Gorithme</nom>
+    <adress telephone=0123456789>
+      <rue>8, bouvevard des Moteurs de Recherche</rue>
+      <ville codepostal=75001>PARIS</ville>
+    </adress>
+    <adress telephone=0234567891>
+      <rue>1, impasse de l'Evasion Fiscale</rue>
+      <ville>Monte-Carlo(Monaco)</ville>
+    </adress>
+  </ami>
+</carnet>
+
+<! ELEMENT carnet (ami*) #PCDATA>
+<! ELEMENT ami (prenom, nom, adress*)>
+<! ELEMENT prenom EMPTY>
+<! ELEMENT nom EMPTY>
+<! ELEMENT adress (rue, ville)>
+<! ELEMENT rue EMPTY>
+<! ELEMENT ville EMPTY>
+<! ELEMENT mobile EMPTY>
+
+<! ATTLIST prenom genre CDATA #REQUIRE>

@@ -1,0 +1,20 @@
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 301 Moved Permanently
+Date: Mon, 24 Feb 2020 21:50:58 GMT
+Server: Apache/2.4.41 (Unix) PHP/7.3.8 mod_perl/2.0.9 Perl/v5.18.4
+Location: http://127.0.0.1/~xinyuhuang/
+Content-Length: 237
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://127.0.0.1/~xinyuhuang/">here</a>.</p>
+</body></html>
