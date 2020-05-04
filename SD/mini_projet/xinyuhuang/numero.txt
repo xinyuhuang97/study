@@ -1,0 +1,35 @@
+#temps	de	recherche	par	numero																								
+#x	y_liste	y_arbrelex	y_tabdyn	y_hachage	(X:numero	Y:ms)																						
+																												
+1	964	1072	990	961																								
+																												
+2	1071	962	952	976																								
+																												
+3	1059	1016	954	954																								
+																												
+4	995	946	943	952																								
+																												
+5	1049	975	933	989																								
+																												
+6	1017	982	973	979																								
+																												
+7	935	969	973	937																								
+																												
+8	968	979	955	941																								
+																												
+9	1007	967	917	935																								
+																												
+10	927	916	997	950																								
+																												
+#ecart	type																											
+#	50,72102347	41,67386604	24,9044842	18,57836256																								
+																												
+#Somme																												
+#	9992	9784	9587	9574																								
+#moyen																												
+#	999,2	978,4	958,7	957,4																								
+																												
+#set	title	numero																										
+#set	xlabel	numero																										
+#set	ylabel	temps																										
+#plot	'numero.txt'	using	1:02	with	lines	title	'liste',	'numero.txt'	using	1:03	with	lines	title	'tabdyn',	'numero.txt'	using	1:04	with	lines	title	'hachage',	'numero.txt'	using	1:05	with	lines	title	'arbrelex'

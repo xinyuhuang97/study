@@ -1,0 +1,6 @@
+Erreur format : <struct> <methode_de_recherche> <argument_pour_methode>
+Erreur format : <struct> <methode_de_recherche> <argument_pour_methode>
+Erreur format : <struct> <methode_de_recherche> <argument_pour_methode>
+Erreur format : <struct> <methode_de_recherche> <argument_pour_methode>
+Erreur format : <struct> <methode_de_recherche> <argument_pour_methode>
+Erreur format : <struct> <methode_de_recherche> <argument_pour_methode>

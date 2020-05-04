@@ -1,0 +1,154 @@
+
+# Build rules for objects
+-include $(OBJECTS:.lo=.d)
+
+# Special dependency for SDL.c, since it depends on SDL_revision.h
+/Users/xinyuhuangmac/Google Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/SDL.c: update-revision
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/atomic/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/audio/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/cpuinfo/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/dynapi/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/events/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/file/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/haptic/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/joystick/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/libm/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/power/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/render/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/render/*/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/sensor/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/stdlib/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/thread/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/timer/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/video/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/video/yuv2rgb/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/video/dummy/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/audio/disk/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/audio/dummy/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/audio/coreaudio/*.m
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/joystick/darwin/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/joystick/hidapi/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/hid.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/hidapi/mac/hid.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/haptic/darwin/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/power/macosx/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/filesystem/cocoa/*.m
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/timer/unix/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/file/cocoa/*.m
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/core/unix/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/sensor/dummy/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/thread/generic/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google
+
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/loadso/dummy/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+
+/Users/xinyuhuangmac/Google 
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/main/dummy/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+/Users/xinyuhuangmac/Google 
+$(objects)/*.lo: Drive/L2_S2/SD/Partie_1_en_ligne_SDL2/SDL2-2.0.9/src/test/*.c
+	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS)  -c $< -o $@
+

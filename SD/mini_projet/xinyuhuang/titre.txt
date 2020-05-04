@@ -1,0 +1,34 @@
+#temps	de	recherche	par	titre																								
+#x	y_liste	y_arbrelex	y_tabdyn	y_hachage	(X:numero	Y:ms)																						
+1	975	1026	1022	1005																								
+																												
+2	1027	1106	1011	1023																								
+																												
+3	1030	1126	1075	1023																								
+																												
+4	1036	1126	990	978																								
+																												
+5	1090	1073	1093	992																								
+																												
+6	1151	1054	1005	1016																								
+																												
+7	1052	1082	995	1051																								
+																												
+8	1052	1088	1001	1000																								
+																												
+9	1035	1082	978	997																								
+																												
+10	1029	1018	1048	1100																								
+																												
+#Somme																												
+#	10477	10781	10218	10185																								
+#moyen																												
+#	1047,7	1078,1	1021,8	1018,5																								
+																												
+#ecart	type																											
+#	46,15445085	37,16165886	38,10161851	35,07848343																								
+																												
+#set	title	titre																										
+#set	xlabel	titre																										
+#set	ylabel	temps																										
+#plot	'titre.txt'	using	1:02	with	lines	title	'liste',	'titre.txt'	using	1:03	with	lines	title	'tabdyn',	'titre.txt'	using	1:04	with	lines	title	'hachage',	'titre.txt'	using	1:05	with	lines	title	'arbrelex'

@@ -1,0 +1,120 @@
+--TME4
+Select a.nom, a.prenom from athlete a where a.pays='Inde';
+Select a.prenom from athlete a where a.nom='GOLD';
+Select a.pays from athlete a where a.nom='AONO' and a.prenom='Ryo';
+Select e.nomath, e.prenomath from RangEpreuve e where e.rang=1 order by e.sport, e.epreuve;
+Select distinct e.sport, e.epreuve, e.categorie, e.datefin from RangEpreuve e order by e.datefin;
+Select a.* from athlete a where extract (year from to_date(a.datenaissance, 'dd-mm-yyyy' ) between 1990 and 1995;
+Select a.nom, a.prenom from RangEpreuve e, Athlete a where a.pays='Suisse' and e.sport='Biathlon' and e.nomath=a.nom and e.prenomath=a.prenom and e.rang IS NULL;
+Select e.sport, e.epreuve, e.categorie from RangEpreuve e
+MINUS
+Select e.sport, e.epreuve,e.categorie from RangEpreuve e where e.rang != 2;
+Select distinct e.sid, e.nomEp, e.categorie from Epreuve e, RangIndividuel r where e.epid=r.epid;
+
+Select a.nomath, a.prenomath, a.codepays, ri.rang from athlete a, Rangindividuel ri, Epreuve e, Sport s where e.nomEp='1000m' and s.nomSp='Patinage de vitesse' and s.sid=e.sid and e.categorie='Femmes' and a.aid=ri.aid and ri.epid=e.epid;
+
+Select a.nomath, a.prenomath from Equipe eq, Athlete a, rangequipe re, epreuve e, AthletesEquipe ae, sport s where re.rang=1 and re.epid=e.epid and e.sid=s.sid and s.nomsp='Biathlon' and e.nomep='relais 4x6km' and e.categorie='Femmes' and ae.eqid=eq.eqid and ae.aid=a.aid and re.epid=e.epid and re.eqid=ae.eqid and eq.eqid=re.eqid;
+
+
+--TME 5
+
+
+Select a.aid from pays p, athlete a where p.nomP='France' and p.codepays=a.codepays;
+
+Select s.nomsp, e.nomep, e.categorie from sport s, epreuve e where s.sid=e.sid order by s.nomsp DESC, e.nomep DESC;
+
+Select a.aid, a.nomAth, a.prenomAth from athlete a, pays p, athletesequipe aq where p.nomp='France' and p.codepays=a.codepays and a.aid = aq.aid;
+Select DISTINCT s.nomsp, e.nomep, e.categorie from sport s, epreuve e, equipe eq, rangequipe req where e.sid=s.sid AND e.epid=req.epid AND req.eqid=eq.eqid;
+
+Select p.nomp from pays p, epreuve e, equipe eq, rangequipe req, sport s where p.codepays = eq.codepays AND s.nomsp = 'Biathlon' AND s.sid = e.sid AND e.nomEp = 'relais 4x6km' AND e.categorie = 'Femmes' AND req.rang = 1 AND eq.eqid = req.eqid AND e.epid = req.epid;
+
+Select DISTINCT a.aid, a.nomAth, a.prenomAth from athlete a, rangindividuel ri where ri.aid=a.aid AND ri.rang<=3;
+
+Select distinct s.nomsp from sport s, athlete a, epreuve e, rangindividuel ri where s.sid = e.sid AND a.nomAth = 'LESSER' AND a.prenomAth = 'Erik' AND a.aid = ri.aid AND ri.epid = e.epid;
+
+Select distinct a.aid, a.nomAth, a.prenomAth from athlete a, epreuve e1, epreuve e2, rangindividuel ri1, rangindividuel ri2  where e1.sid<>e2.sid AND a.aid=ri1.aid AND ri1.aid=ri2.aid AND ri1.aid=a.aid AND e1.epid=ri1.epid AND e2.epid=ri2.epid;
+
+Select distinct e1.datedebut, e2.datefin from epreuve e1, epreuve e2 where e1.datedebut <= ALL ( Select e3.datedebut from epreuve e3) AND e2.datefin >= ALL (Select e4.datefin from epreuve e4);
+
+Select distinct p.codepays, p.nomp from pays p, athlete ath where((( 2016 - extract(YEAR from ath.datenaissance)) <= 18) OR ( (2016 - extract(YEAR from ath.datenaissance)) >= 40 ))  AND ath.codepays = p.codepays;
+Select distinct p.codepays, p.nomp from pays p, athlete ath where ((((to_date('24-02-2016', 'DD/MM/YY') - ath.datenaissance ) / 365 ) < 18) OR (((to_date('24-02-2016', 'DD/MM/YY') - ath.datenaissance ) / 365 ) > 40)) AND ath.codepays = p.codepays order by p.codepays ASC, p.nomp ASC;
+
+select distinct e.eqid from equipe e  where NOT EXISTS (SELECT * from AthletesEquipe aeq  where aeq.eqid=e.eqid) ;
+
+select distinct aeq1.eqid, aeq1.aid, aeq2.aid from athletesequipe aeq1, athletesequipe aeq2 where aeq1.eqid=aeq2.eqid AND aeq1.aid>aeq2.aid AND NOT EXISTS (select * from athletesequipe aeq3 where aeq3.eqid=aeq1.eqid AND aeq1.aid<>aeq3.aid AND aeq2.aid<>aeq3.aid);
+
+
+select distinct s.nomsp
+from sport s
+where s.sid NOT IN(select e.sid
+                  from epreuve e
+                  where e.categorie='mixte'
+                  AND NOT(e.datedebut IS NULL)
+                  AND NOT(e.datefin IS NULL)
+                  AND NOT(e.nomep IS NULL));
+
+select distinct s.nomsp
+from sport s
+where  NOT EXISTS (select *
+                  from epreuve e
+                  where e.sid=s.sid
+                  AND e.categorie='mixte');
+
+select  a.aid, a.nomAth, a.prenomAth ,e.nomep
+from athlete a ,epreuve e
+where EXISTS (select *
+              from rangindividuel ri
+              where ri.aid=a.aid AND ri.rang=1 AND e.epid=ri.epid)
+AND NOT EXISTS(select *
+               from rangindividuel ri2
+               where ri2.aid=a.aid AND (ri2.rang=2 OR ri2.rang=3));
+
+、
+--select distinct a.aid, a.nomAth, a.prenomAth
+--from athlete a
+--where EXISTS (select *
+--              from rangindividuel ri, rangequipe req, athletesequipe aeq
+--              where(ri.aid=a.aid AND ri.rang=1) OR (req.eqid=aeq.eqid AND aeq.aid=a.aid AND req.rang=1))
+--AND NOT EXISTS(select *
+--               from rangindividuel ri2, rangequipe req, athletesequipe aeq
+--               where (ri2.aid=a.aid AND ((ri2.rang=2)OR(ri2.rang=3)))OR (req.eqid=aeq.eqid AND aeq.aid=a.aid AND (req.rang=2 OR req.rang=3)))
+
+select a.aid, a.nomAth, a.prenomAth
+from athlete a
+where EXISTS(select*
+              from rangindividuel ri
+              where ri.aid=a.aid AND ri.rang=1)
+AND NOT EXISTS(select *
+               from rangindividuel ri2
+              where (ri2.aid=a.aid AND ((ri2.rang=2)OR(ri2.rang=3))))
+PLUS
+select a.aid, a.nomAth, a.prenomAth
+from athlete a
+where EXISTS(select*
+              from rangequipe req, athletesequipe aeq
+              where req.eqid=aeq.eqid AND aeq.aid=a.aid AND req.rang=1)
+AND NOT EXISTS(select *
+               from rangindividuel ri2, rangequipe req, athletesequipe aeq
+              where req.eqid=aeq.eqid AND aeq.aid=a.aid AND (req.rang=2 OR req.rang=3))
+
+
+
+--nb_sport_individuel
+select distinct e.*
+from   epreuve e, RangIndividuel ri
+where ri.epid=e.epid;
+
+
+--NOT NULL!
+select a.nomath, a.prenomAth
+from athlete a, RangIndividuel ri ,epreuve e
+where e.epid=ri.epid AND a.aid=ri.aid AND ri.rang>=ALL(select ri2.rang
+                                   from rangindividuel ri2
+                                    where ri2.epid=e.epid AND NOT (ri2.rang IS NULL));
+
+
+select a.nomath, a.prenomAth
+from athlete a, RangIndividuel ri ,epreuve e
+where e.epid=ri.epid AND a.aid=ri.aid AND NOT(ri.rang IS NULL)AND NOT EXISTS(select *
+                                                      from rangindividuel ri2
+                                                      where ri2.epid=e.epid AND ri2.rang>ri.rang);

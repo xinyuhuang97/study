@@ -1,0 +1,10 @@
+plot "01_sortie_vitesse.txt" using 1:2 with lines
+replot "02_sortie_vitesse.txt" using 1:2 with lines
+set xrang [0:100]
+set yrang [-10:50]
+set xlabel "nb occurrence(mile)" font "Times-Roman,18"
+set ylabel "temps(seconde)" font "Times-Roman,18"
+set term postscript portrait
+set output "01_courbes_vitesse.ps"
+set size 0.7, 0.7
+replot

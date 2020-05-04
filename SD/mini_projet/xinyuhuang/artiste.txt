@@ -1,0 +1,36 @@
+#temps	de	recherche	par	numero
+#x	y_liste	y_arbrelex	y_tabdyn	y_hachage	(X:artiste	Y:ms)
+
+1	1064	1061	1073	992
+
+2	1003	1030	950	943
+
+3	1014	1057	972	1007
+
+4	1024	1009	949	993
+
+5	1029	984	948	987
+
+6	1041	974	971	958
+
+7	1130	960	1039	960
+
+8	1029	1036	950	999
+
+9	977	1062	984	947
+
+10	1027	1040	962	1034
+
+
+#ecart	type
+#	40,78888738	37,54419618	42,68697433	29,19284539																								
+
+#Somme
+#	10338	10213	9798	9820
+#moyen
+#	1033,8	1021,3	979,8	982
+
+#set	title	artiste
+#set	xlabel	artiste
+#set	ylabel	temps
+#plot	'artiste.txt'	using	1:02	with	lines	title	'liste',	'artiste.txt'	using	1:03	with	lines	title	'tabdyn',	'artiste.txt'	using	1:04	with	lines	title	'hachage',	'artiste.txt'	using	1:05	with	lines	title	'arbrelex'
